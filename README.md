@@ -1,6 +1,9 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Dashboard
+
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/40610119/84509469-1e35ba00-ac9a-11ea-9e17-f1acda1cfc52.gif)
 
 ## Available Scripts
+
 
 In the project directory, you can run:
 
