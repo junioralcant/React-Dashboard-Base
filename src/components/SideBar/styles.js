@@ -1,5 +1,40 @@
 import styled from "styled-components";
 
+export const Button = styled.button`
+  display: ${(props) => (props.teste ? "relative" : "none")};
+  top: 0;
+  right: 0;
+  background: none;
+  color: #000;
+  font-size: 32px;
+  margin-top: 10px;
+  margin-left: 10px;
+  border: none;
+
+  @media (max-width: 600px) {
+    display: ${(props) => (props.teste ? "unset" : "none")} !important;
+    position: absolute !important;
+  }
+`;
+
+export const Close = styled.button`
+  display: none;
+  top: 0;
+  right: 0;
+  background: none;
+  color: #000;
+  font-size: 32px;
+  margin-top: 10px;
+  margin-left: 10px;
+  border: none;
+  color: #fff;
+
+  @media (max-width: 600px) {
+    display: unset !important;
+    position: absolute !important;
+  }
+`;
+
 export const SideNav = styled.div`
   height: 100%;
   width: 200px;
@@ -10,6 +45,33 @@ export const SideNav = styled.div`
   background: #208eeb;
   overflow-x: hidden;
   padding-top: 30px;
+
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    align-items: center;
+
+    p {
+      display: none;
+    }
+
+    div {
+      width: 100%;
+    }
+
+    a {
+      width: 100%;
+      justify-content: center;
+      span {
+        font-size: 20px;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    display: ${(props) => (props.teste ? "relative" : "none")};
+  }
 
   strong {
     display: flex;
@@ -23,6 +85,11 @@ export const SideNav = styled.div`
       margin-right: 10px;
       font-size: 25px;
       color: #fbc46a;
+    }
+
+    a {
+      display: flex;
+      background: #000;
     }
   }
 
@@ -42,7 +109,7 @@ export const SideNav = styled.div`
     text-decoration: none;
     font-size: 15px;
     color: #a6d2f7;
-    display: block;
+    display: flex;
 
     &:hover {
       color: #f1f1f1;
@@ -62,4 +129,12 @@ export const SideNav = styled.div`
       color: #fbc46a;
     }
   }
+`;
+export const Background = styled.div`
+  position: fixed;
+  display: ${(props) => (props.teste ? "block" : "none")};
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
 `;
